@@ -19,6 +19,30 @@ const cards = [
     url: 'images/smokey.png'
   },
   {
+    name: 'vintage',
+    url: 'images/vintage.gif'
+  },
+  {
+    name: 'vintage',
+    url: 'images/vintage.gif'
+  },
+  {
+    name: 'original',
+    url: 'images/original.gif'
+  },
+  {
+    name: 'original',
+    url: 'images/original.gif'
+  },
+  {
+    name: 'crockett',
+    url: 'images/crockett.png'
+  },
+  {
+    name: 'crockett',
+    url: 'images/crockett.png'
+  },
+  {
     name: 'vols',
     url: 'images/vols.png'
   },
@@ -33,8 +57,18 @@ const cards = [
   {
     name: 'tenn',
     url: 'images/tenn.png'
+  },
+  {
+    name: 'ut',
+    url: 'images/ut.png'
+  },
+  {
+    name: 'ut',
+    url: 'images/ut.png'
   }
 ]
+
+let gameSize = cards.length
 
 const shuffledCards = []
 
@@ -42,7 +76,7 @@ let cardOne
 let cardTwo
 
 const shuffle = () => {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < gameSize; i++) {
     let random = Math.floor(Math.random() * cards.length)
     shuffledCards.push(cards[random])
     cards.splice(random, 1)
