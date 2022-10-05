@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background-color: grey;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 10vh;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 80vh;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 5vh;
+  text-decoration: underline;
+  text-decoration-color: #FF8200;
+}
+
+.card {
+  background-color: #58595B;
+  border: 5px solid #FF8200;
+  height: 250px;
+  width: 150px;
+  margin: 20px;
+  border-radius: 5%;
+  background-size: cover;
+}
+
+.card:hover {
+  background-color: #66676a;
+  cursor: pointer;
+}
+
+.flipped {
+  background-color: #FFFFFF;
+  border: 5px solid #FF8200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipped:hover {
+  background-color: #FFFFFF;
+  cursor: none;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  background-color: #FFFFFF;
+  height: 10vh;
+  width: 100vw;
+  background-image:
+      -moz-linear-gradient(45deg, #FF8200 25%, transparent 25%), 
+      -moz-linear-gradient(-45deg, #FF8200 25%, transparent 25%),
+      -moz-linear-gradient(45deg, transparent 75%, #FF8200 75%),
+      -moz-linear-gradient(-45deg, transparent 75%, #FF8200 75%);
+    background-image:
+      -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #FF8200), color-stop(.25, transparent)), 
+      -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #FF8200), color-stop(.25, transparent)),
+      -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #FF8200)),
+      -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #FF8200));
+
+    -moz-background-size:100px 100px;
+    background-size:100px 100px;
+    -webkit-background-size:100px 101px; /* override value for shitty webkit */
+    
+    background-position:0 0, 50px 0, 50px -50px, 0px 50px;
+}
+
+/* .box {
+  height: 5vh;
+  width: 5vw;
+}
+
+.orange {
+  background-color: #FF8200;
+}
+
+.white {
+  background-color: #FFFFFF;
+} */
