@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background-color: #333333;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  height: 10vh;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 80vh;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 5vh;
+  text-decoration: underline;
+  text-decoration-color: #CC0000;
+}
+
+.card {
+  background-color: #000000;
+  border: 5px solid #CC0000;
+  height: 250px;
+  width: 150px;
+  margin: 20px;
+  border-radius: 5%;
+  background-size: cover;
+}
+
+.card:hover {
+  background-color: #1d1d1d;
+  cursor: pointer;
+}
+
+.flipped {
+  background-color: #FFFFFF;
+  border: 5px solid #CC0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipped:hover {
+  background-color: #FFFFFF;
+  cursor: none;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  border-top: 5px solid #000000;
+  border-bottom: 5px solid #000000;
+  background-color: #FFFFFF;
+  height: 10vh;
+  width: 100vw;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer > div {
+  background-color: #CC0000;
+  border-top: 5px solid #000000;
+  border-bottom: 5px solid #000000;
+  height: 3.33vh;
+}

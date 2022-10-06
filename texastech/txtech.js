@@ -4,67 +4,67 @@ let footer = document.querySelector('footer')
 const cards = [
   {
     name: 'logo',
-    url: 'images/tennessee/logo.png'
+    url: '../images/texastech/logo.png'
   },
   {
     name: 'logo',
-    url: 'images/tennessee/logo.png'
+    url: '../images/texastech/logo.png'
   },
   {
-    name: 'smokey',
-    url: 'images/tennessee/smokey.png'
+    name: 'rider',
+    url: '../images/texastech/rider.png'
   },
   {
-    name: 'smokey',
-    url: 'images/tennessee/smokey.png'
+    name: 'rider',
+    url: '../images/texastech/rider.png'
   },
   {
-    name: 'vintage',
-    url: 'images/tennessee/vintage.gif'
+    name: 'dirkwest',
+    url: '../images/texastech/dirkwest.gif'
   },
   {
-    name: 'vintage',
-    url: 'images/tennessee/vintage.gif'
-  },
-  {
-    name: 'original',
-    url: 'images/tennessee/original.gif'
+    name: 'dirkwest',
+    url: '../images/texastech/dirkwest.gif'
   },
   {
     name: 'original',
-    url: 'images/tennessee/original.gif'
+    url: '../images/texastech/original.gif'
   },
   {
-    name: 'crockett',
-    url: 'images/tennessee/crockett.png'
+    name: 'original',
+    url: '../images/texastech/original.gif'
   },
   {
-    name: 'crockett',
-    url: 'images/tennessee/crockett.png'
+    name: 'raiderred',
+    url: '../images/texastech/raiderred.gif'
   },
   {
-    name: 'vols',
-    url: 'images/tennessee/vols.png'
+    name: 'raiderred',
+    url: '../images/texastech/raiderred.gif'
   },
   {
-    name: 'vols',
-    url: 'images/tennessee/vols.png'
+    name: 'gunsup',
+    url: '../images/texastech/gunsup.gif'
   },
   {
-    name: 'tenn',
-    url: 'images/tennessee/tenn.png'
+    name: 'gunsup',
+    url: '../images/texastech/gunsup.gif'
   },
   {
-    name: 'tenn',
-    url: 'images/tennessee/tenn.png'
+    name: 'tex',
+    url: '../images/texastech/tex.gif'
   },
   {
-    name: 'ut',
-    url: 'images/tennessee/ut.png'
+    name: 'tex',
+    url: '../images/texastech/tex.gif'
   },
   {
-    name: 'ut',
-    url: 'images/tennessee/ut.png'
+    name: 'tt',
+    url: '../images/texastech/tt.gif'
+  },
+  {
+    name: 'tt',
+    url: '../images/texastech/tt.gif'
   }
 ]
 

@@ -63,6 +63,7 @@ footer {
   background-color: #FFFFFF;
   height: 10vh;
   width: 100vw;
+  cursor: pointer;
   background-image:
       -moz-linear-gradient(45deg, #FF8200 25%, transparent 25%), 
       -moz-linear-gradient(-45deg, #FF8200 25%, transparent 25%),
@@ -80,16 +81,3 @@ footer {
     
     background-position:0 0, 50px 0, 50px -50px, 0px 50px;
 }
-
-/* .box {
-  height: 5vh;
-  width: 5vw;
-}
-
-.orange {
-  background-color: #FF8200;
-}
-
-.white {
-  background-color: #FFFFFF;
-} */
