@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'itc_lubalin_graphdemi';
+  src: url('../fonts/itc_lubalin_graph_demi_regular-webfont.woff2')
+      format('woff2'),
+    url('../fonts/itc_lubalin_graph_demi_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background-color: #333333;
@@ -21,7 +30,7 @@ header {
   align-items: center;
   align-self: center;
 
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
 }
 
@@ -42,7 +51,7 @@ h1 {
 .card {
   background-color: #000000;
   border: 5px solid #cc0000;
-  height: 15vh;
+  height: 13vh;
   width: 9vh;
   border-radius: 5%;
   background-size: cover;
@@ -71,10 +80,9 @@ img {
 }
 
 footer {
-  border-top: 5px solid #000000;
-  border-bottom: 5px solid #000000;
-  background-color: #ffffff;
-  height: 9vh;
+  border: 4px solid white;
+  background-color: black;
+  height: 19vh;
   width: 100vw;
   cursor: pointer;
 
@@ -83,9 +91,18 @@ footer {
   justify-content: center;
 }
 
-footer > div {
-  background-color: #cc0000;
-  border-top: 5px solid #000000;
-  border-bottom: 5px solid #000000;
-  height: 3.33vh;
+footer > p {
+  font-family: 'itc_lubalin_graphdemi', serif;
+  font-size: 18vh;
+  color: #cc0000;
+  text-decoration: none;
+  text-shadow:
+    -2px -2px 0 #ffffff,  
+     2px -2px 0 #ffffff,
+    -2px  2px 0 #ffffff,
+     2px  2px 0 #ffffff;
+}
+
+a {
+  text-decoration: none;
 }

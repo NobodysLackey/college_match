@@ -21,7 +21,7 @@ header {
   align-items: center;
   align-self: center;
 
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
 }
 
@@ -42,7 +42,7 @@ h1 {
 .card {
   background-color: #58595B;
   border: 5px solid #FF8200;
-  height: 15vh;
+  height: 13vh;
   width: 9vh;
   border-radius: 5%;
   background-size: cover;
@@ -72,7 +72,7 @@ img {
 
 footer {
   background-color: #FFFFFF;
-  height: 10vh;
+  height: 20vh;
   width: 100vw;
   cursor: pointer;
   background-image:
