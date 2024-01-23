@@ -1,6 +1,8 @@
 let board = document.querySelector('.game-board')
 let footer = document.querySelector('footer')
 
+const rockyTop = new Audio('rocky-top.mp3')
+
 const cards = [
   {
     name: 'logo',
@@ -69,6 +71,7 @@ const cards = [
 ]
 
 let gameSize = cards.length
+let matches = 0
 
 const shuffledCards = []
 
@@ -85,6 +88,7 @@ const shuffle = () => {
 
 const checkForMatch = () => {
   if (cardOne.name === cardTwo.name) {
+    matches++
     return true
   } else {
     return false
@@ -128,6 +132,9 @@ const flipCard = (index) => {
       cardOne = null
       cardTwo = null
     }
+  }
+  if (matches === gameSize / 2) {
+    rockyTop.play()
   }
 }
 

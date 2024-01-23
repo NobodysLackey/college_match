@@ -14,12 +14,15 @@ header {
 }
 
 .game-board {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  flex-wrap: wrap;
+  align-self: center;
 
   height: 80vh;
+  width: 100vw;
 }
 
 h1 {
@@ -32,9 +35,8 @@ h1 {
 .card {
   background-color: #58595B;
   border: 5px solid #FF8200;
-  height: 250px;
-  width: 150px;
-  margin: 20px;
+  height: 15vh;
+  width: 9vh;
   border-radius: 5%;
   background-size: cover;
 }
