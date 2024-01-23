@@ -1,4 +1,4 @@
-let board = document.querySelector('.game-board')
+let board = document.querySelector('#game-board')
 let footer = document.querySelector('footer')
 
 const rockyTop = new Audio('rocky-top.mp3')
