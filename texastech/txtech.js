@@ -107,7 +107,7 @@ const flipCard = (index) => {
   if (allCards[index].className.includes('flipped')) {
     return
   }
-  allCards[index].classList.add('flipped')
+  allCards[index].classList.add('flipped', 'animate__animated', 'animate__flip')
   let image = document.createElement('img')
   image.setAttribute('src', shuffledCards[index].url)
   allCards[index].appendChild(image)
@@ -126,15 +126,53 @@ const flipCard = (index) => {
     if (!checkForMatch()) {
       setTimeout(() => {
         allCards[cardOne.index].innerHTML = ''
+        allCards[cardOne.index].classList.remove(
+          'flipped',
+          'animate__animated',
+          'animate__flip'
+        )
         allCards[cardTwo.index].innerHTML = ''
-        allCards[cardOne.index].classList.remove('flipped')
-        allCards[cardTwo.index].classList.remove('flipped')
+        allCards[cardTwo.index].classList.remove(
+          'flipped',
+          'animate__animated',
+          'animate__flip'
+        )
+        setTimeout(() => {
+          allCards[cardOne.index].classList.add(
+            'animate__animated',
+            'animate__flip'
+          )
+          allCards[cardTwo.index].classList.add(
+            'animate__animated',
+            'animate__flip'
+          )
+        }, 10)
+      }, 1500)
+      setTimeout(() => {
+        allCards[cardOne.index].classList.remove(
+          'animate__animated',
+          'animate__flip'
+        )
         cardOne = null
+        allCards[cardTwo.index].classList.remove(
+          'animate__animated',
+          'animate__flip'
+        )
+        cardTwo = null
+      }, 2400)
+    } else {
+      setTimeout(() => {
+        allCards[cardOne.index].classList.remove(
+          'animate__animated',
+          'animate__flip'
+        )
+        cardOne = null
+        allCards[cardTwo.index].classList.remove(
+          'animate__animated',
+          'animate__flip'
+        )
         cardTwo = null
       }, 1500)
-    } else {
-      cardOne = null
-      cardTwo = null
     }
   }
   if (matches === gameSize / 2) {
