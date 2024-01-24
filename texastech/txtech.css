@@ -1,8 +1,7 @@
 @font-face {
-  font-family: 'itc_lubalin_graphdemi';
-  src: url('../fonts/itc_lubalin_graph_demi_regular-webfont.woff2')
-      format('woff2'),
-    url('../fonts/itc_lubalin_graph_demi_regular-webfont.woff') format('woff');
+  font-family: 'superstar_m54regular';
+  src: url('../fonts/superstar_m54-webfont.woff2') format('woff2'),
+    url('../fonts/superstar_m54-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -83,7 +82,7 @@ footer {
   border: 4px solid white;
   background-color: black;
   height: 19vh;
-  width: 100vw;
+  width: 99vw;
   cursor: pointer;
 
   display: flex;
@@ -92,15 +91,13 @@ footer {
 }
 
 footer > p {
-  font-family: 'itc_lubalin_graphdemi', serif;
-  font-size: 18vh;
-  color: #cc0000;
+  font-family: 'superstar_m54regular', serif;
+  font-size: 12vw;
+  max-width: 100%;
+  color: #ffffff;
   text-decoration: none;
-  text-shadow:
-    -2px -2px 0 #ffffff,  
-     2px -2px 0 #ffffff,
-    -2px  2px 0 #ffffff,
-     2px  2px 0 #ffffff;
+  text-shadow: -3px -3px 0 #cc0000, 3px -3px 0 #cc0000, -3px 3px 0 #cc0000,
+    3px 3px 0 #cc0000;
 }
 
 a {
