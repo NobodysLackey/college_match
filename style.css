@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: grey;
+  background-color: #808080;
   text-align: center;
   font-family: 'EB Garamond', serif;
   display: flex;
@@ -11,6 +11,15 @@ body {
 
 header {
   height: 10vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 #game-board {
@@ -32,6 +41,47 @@ header {
   padding: 0;
 }
 
+#pause, #replay {
+  border-radius: 50%;
+  border: 4px solid #FF8200;
+  height: 5vh;
+  width: 5vh;
+  color: #58595B;
+  background-color: #FFFFFF;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#pause > img {
+  height: 2vh;
+  width: 2vh;
+  filter: opacity(50%);
+}
+
+#replay > img {
+  height: 3vh;
+  width: 3vh;
+  filter: opacity(50%);
+}
+
+#pause {
+  display: none;
+}
+
+#replay {
+  display: none;
+}
+
+#pause:hover, #replay:hover {
+  background-color: #ececec;
+}
+
+header > div {
+  width: 10vw;
+}
+
 h1 {
   color: #FFFFFF;
   font-size: 5vh;
@@ -42,8 +92,8 @@ h1 {
 .card {
   background-color: #58595B;
   border: 5px solid #FF8200;
-  height: 13vh;
-  width: 9vh;
+  height: 11vh;
+  width: 8vh;
   border-radius: 5%;
   background-size: cover;
 }

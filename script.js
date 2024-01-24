@@ -1,5 +1,8 @@
-let board = document.querySelector('#game-board')
-let footer = document.querySelector('footer')
+const board = document.querySelector('#game-board')
+const footer = document.querySelector('footer')
+const pauseButton = document.querySelector('#pause')
+const replayButton = document.querySelector('#replay')
+const playPauseButton = document.querySelector('#playPauseButton')
 
 const rockyTop = new Audio('rocky-top.mp3')
 
@@ -73,12 +76,13 @@ const cards = [
 let gameSize = cards.length
 let matches = 0
 
-const shuffledCards = []
+let shuffledCards = []
 
 let cardOne
 let cardTwo
 
 const shuffle = () => {
+  shuffledCards = []
   for (let i = 0; i < gameSize; i++) {
     let random = Math.floor(Math.random() * cards.length)
     shuffledCards.push(cards[random])
@@ -135,11 +139,14 @@ const flipCard = (index) => {
   }
   if (matches === gameSize / 2) {
     rockyTop.play()
+    pauseButton.style.display = 'flex'
+    replayButton.style.display = 'flex'
   }
 }
 
 const generateBoard = () => {
   shuffle()
+  board.innerHTML = ''
   for (let i = 0; i < shuffledCards.length; i++) {
     let card = document.createElement('div')
     card.classList.add('card')
@@ -149,3 +156,19 @@ const generateBoard = () => {
 }
 
 generateBoard()
+
+replayButton.addEventListener('click', () => {
+  generateBoard()
+})
+
+pauseButton.addEventListener('click', () => {
+  if (rockyTop.paused) {
+    rockyTop.play()
+    playPauseButton.setAttribute('src', './icons/pause.png')
+    playPauseButton.setAttribute('alt', 'pause')
+  } else {
+    rockyTop.pause()
+    playPauseButton.setAttribute('src', './icons/play.png')
+    playPauseButton.setAttribute('alt', 'play')
+  }
+})
