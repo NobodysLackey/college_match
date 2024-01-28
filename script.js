@@ -6,7 +6,7 @@ const playPauseButton = document.querySelector('#playPauseButton')
 
 const rockyTop = new Audio('rocky-top.mp3')
 
-const cards = [
+let cards = [
   {
     name: 'logo',
     url: 'images/tennessee/logo.png'
@@ -182,17 +182,86 @@ const flipCard = (index) => {
   }
 }
 
-const generateBoard = (first) => {
-  if (first) {
-
-  }
+const generateBoard = () => {
+  cards = [
+    {
+      name: 'logo',
+      url: 'images/tennessee/logo.png'
+    },
+    {
+      name: 'logo',
+      url: 'images/tennessee/logo.png'
+    },
+    {
+      name: 'smokey',
+      url: 'images/tennessee/smokey.png'
+    },
+    {
+      name: 'smokey',
+      url: 'images/tennessee/smokey.png'
+    },
+    {
+      name: 'vintage',
+      url: 'images/tennessee/vintage.gif'
+    },
+    {
+      name: 'vintage',
+      url: 'images/tennessee/vintage.gif'
+    },
+    {
+      name: 'original',
+      url: 'images/tennessee/original.gif'
+    },
+    {
+      name: 'original',
+      url: 'images/tennessee/original.gif'
+    },
+    {
+      name: 'crockett',
+      url: 'images/tennessee/crockett.png'
+    },
+    {
+      name: 'crockett',
+      url: 'images/tennessee/crockett.png'
+    },
+    {
+      name: 'vols',
+      url: 'images/tennessee/vols.png'
+    },
+    {
+      name: 'vols',
+      url: 'images/tennessee/vols.png'
+    },
+    {
+      name: 'tenn',
+      url: 'images/tennessee/tenn.png'
+    },
+    {
+      name: 'tenn',
+      url: 'images/tennessee/tenn.png'
+    },
+    {
+      name: 'ut',
+      url: 'images/tennessee/ut.png'
+    },
+    {
+      name: 'ut',
+      url: 'images/tennessee/ut.png'
+    }
+  ]
   shuffle()
   board.innerHTML = ''
   for (let i = 0; i < shuffledCards.length; i++) {
-    let card = document.createElement('div')
-    card.classList.add('card')
-    card.addEventListener('click', () => flipCard(i))
-    board.appendChild(card)
+    setTimeout(() => {
+      let card = document.createElement('div')
+      card.classList.add('card')
+      card.addEventListener('click', () => flipCard(i))
+      board.appendChild(card)
+      card.classList.add('animate__animated', 'animate__flip')
+      setTimeout(() => {
+        card.classList.remove('animate__animated', 'animate__flip')
+      }, 1500)
+    }, 100 * i)
   }
 }
 

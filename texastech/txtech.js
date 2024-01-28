@@ -6,7 +6,7 @@ const playPauseButton = document.querySelector('#playPauseButton')
 
 const matadorSong = new Audio('matador-song.mp3')
 
-const cards = [
+let cards = [
   {
     name: 'logo',
     url: '../images/texastech/logo.png'
@@ -183,13 +183,85 @@ const flipCard = (index) => {
 }
 
 const generateBoard = () => {
+  cards = [
+    {
+      name: 'logo',
+      url: '../images/texastech/logo.png'
+    },
+    {
+      name: 'logo',
+      url: '../images/texastech/logo.png'
+    },
+    {
+      name: 'rider',
+      url: '../images/texastech/rider.png'
+    },
+    {
+      name: 'rider',
+      url: '../images/texastech/rider.png'
+    },
+    {
+      name: 'dirkwest',
+      url: '../images/texastech/dirkwest.gif'
+    },
+    {
+      name: 'dirkwest',
+      url: '../images/texastech/dirkwest.gif'
+    },
+    {
+      name: 'original',
+      url: '../images/texastech/original.gif'
+    },
+    {
+      name: 'original',
+      url: '../images/texastech/original.gif'
+    },
+    {
+      name: 'raiderred',
+      url: '../images/texastech/raiderred.gif'
+    },
+    {
+      name: 'raiderred',
+      url: '../images/texastech/raiderred.gif'
+    },
+    {
+      name: 'gunsup',
+      url: '../images/texastech/gunsup.gif'
+    },
+    {
+      name: 'gunsup',
+      url: '../images/texastech/gunsup.gif'
+    },
+    {
+      name: 'tex',
+      url: '../images/texastech/tex.gif'
+    },
+    {
+      name: 'tex',
+      url: '../images/texastech/tex.gif'
+    },
+    {
+      name: 'tt',
+      url: '../images/texastech/tt.gif'
+    },
+    {
+      name: 'tt',
+      url: '../images/texastech/tt.gif'
+    }
+  ]
   shuffle()
   board.innerHTML = ''
   for (let i = 0; i < shuffledCards.length; i++) {
-    let card = document.createElement('div')
-    card.classList.add('card')
-    card.addEventListener('click', () => flipCard(i))
-    board.appendChild(card)
+    setTimeout(() => {
+      let card = document.createElement('div')
+      card.classList.add('card')
+      card.addEventListener('click', () => flipCard(i))
+      board.appendChild(card)
+      card.classList.add('animate__animated', 'animate__flip')
+      setTimeout(() => {
+        card.classList.remove('animate__animated', 'animate__flip')
+      }, 1500)
+    }, 100 * i)
   }
 }
 
