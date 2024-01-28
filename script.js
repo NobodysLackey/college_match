@@ -168,27 +168,65 @@ const flipCard = (index) => {
       }, 3000)
     } else {
       setTimeout(() => {
+        setTimeout(() => {
+          allCards[cardOne.index].classList.remove(
+            'animate__animated',
+            'animate__flip'
+          )
+          setTimeout(() => {
+            allCards[cardOne.index].classList.add(
+              'animate__animated',
+              'animate__heartBeat'
+            )
+          }, 50)
+        }, 200)
+        setTimeout(() => {
+          allCards[cardTwo.index].classList.remove(
+            'animate__animated',
+            'animate__flip'
+          )
+          setTimeout(() => {
+            allCards[cardTwo.index].classList.add(
+              'animate__animated',
+              'animate__heartBeat'
+            )
+          }, 50)
+        }, 200)
+      }, 800)
+      setTimeout(() => {
         allCards[cardOne.index].classList.remove(
           'animate__animated',
-          'animate__flip'
+          'animate__heartBeat'
         )
         cardOne = null
         allCards[cardTwo.index].classList.remove(
           'animate__animated',
-          'animate__flip'
+          'animate__heartBeat'
         )
         cardTwo = null
-      }, 1500)
+      }, 3000)
     }
   }
   if (matches === gameSize / 2) {
     rockyTop.play()
     pauseButton.style.display = 'flex'
     replayButton.style.display = 'flex'
+    setTimeout(() => {
+      for (let i = 0; i < board.children.length; i++) {
+        board.children[i].classList.add('animate__animated', 'animate__tada')
+        setTimeout(() => {
+          board.children[i].classList.remove(
+            'animate__animated',
+            'animate__tada'
+          )
+        }, 5000)
+      }
+    }, 3000)
   }
 }
 
 const generateBoard = () => {
+  matches = 0
   cards = [
     {
       name: 'logo',
