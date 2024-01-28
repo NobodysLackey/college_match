@@ -125,28 +125,34 @@ const flipCard = (index) => {
     }
     if (!checkForMatch()) {
       setTimeout(() => {
-        allCards[cardOne.index].innerHTML = ''
-        allCards[cardOne.index].classList.remove(
-          'flipped',
-          'animate__animated',
-          'animate__flip'
-        )
-        allCards[cardTwo.index].innerHTML = ''
-        allCards[cardTwo.index].classList.remove(
-          'flipped',
-          'animate__animated',
-          'animate__flip'
-        )
         setTimeout(() => {
-          allCards[cardOne.index].classList.add(
+          allCards[cardOne.index].innerHTML = ''
+          allCards[cardOne.index].classList.remove(
+            'flipped',
             'animate__animated',
             'animate__flip'
           )
-          allCards[cardTwo.index].classList.add(
+          setTimeout(() => {
+            allCards[cardOne.index].classList.add(
+              'animate__animated',
+              'animate__flip'
+            )
+          }, 50)
+        }, 200)
+        setTimeout(() => {
+          allCards[cardTwo.index].innerHTML = ''
+          allCards[cardTwo.index].classList.remove(
+            'flipped',
             'animate__animated',
             'animate__flip'
           )
-        }, 5)
+          setTimeout(() => {
+            allCards[cardTwo.index].classList.add(
+              'animate__animated',
+              'animate__flip'
+            )
+          }, 50)
+        }, 400)
       }, 1500)
       setTimeout(() => {
         allCards[cardOne.index].classList.remove(
@@ -159,7 +165,7 @@ const flipCard = (index) => {
           'animate__flip'
         )
         cardTwo = null
-      }, 2400)
+      }, 3000)
     } else {
       setTimeout(() => {
         allCards[cardOne.index].classList.remove(
