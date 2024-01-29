@@ -173,24 +173,32 @@ const flipCard = (index) => {
             'animate__animated',
             'animate__flip'
           )
-          setTimeout(() => {
-            allCards[cardOne.index].classList.add(
-              'animate__animated',
-              'animate__heartBeat'
-            )
-          }, 50)
+          if (matches === gameSize / 2) {
+            return
+          } else {
+            setTimeout(() => {
+              allCards[cardOne.index].classList.add(
+                'animate__animated',
+                'animate__heartBeat'
+              )
+            }, 50)
+          }
         }, 200)
         setTimeout(() => {
           allCards[cardTwo.index].classList.remove(
             'animate__animated',
             'animate__flip'
           )
-          setTimeout(() => {
-            allCards[cardTwo.index].classList.add(
-              'animate__animated',
-              'animate__heartBeat'
-            )
-          }, 50)
+          if (matches === gameSize / 2) {
+            return
+          } else {
+            setTimeout(() => {
+              allCards[cardTwo.index].classList.add(
+                'animate__animated',
+                'animate__heartBeat'
+              )
+            }, 50)
+          }
         }, 200)
       }, 800)
       setTimeout(() => {
@@ -221,7 +229,7 @@ const flipCard = (index) => {
           )
         }, 5000)
       }
-    }, 3000)
+    }, 1750)
   }
 }
 
